@@ -98,19 +98,28 @@ const MOCK_DATA = {
 };
 
 export function useData() {
+  const [isLoading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<null | string | unknown>(null);
   const [data, setData] = useState<typeof MOCK_DATA>();
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
-      setData(MOCK_DATA);
-      setIsLoading(false);
-    }, 2000);
+    const fetchData = async () => {
+      try {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        setData(MOCK_DATA);
+      } catch (error) {
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
 
   return {
-    data,
-    error: false,
     isLoading,
+    error,
+    data,
   };
 }

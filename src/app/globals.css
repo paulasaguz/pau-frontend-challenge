@@ -3,25 +3,33 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  /* --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255; */
+  --primary: #536DC4;
+  --mediumBlue: #3B54AB;
+  --white: #FFFFFF;
+  --font: #514F4E;
+  --aqua: #4FDCCA;
+  --lightAqua: #EFFAF9;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --font: white;
   }
-}
+} */
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  .footerItem {
+    color: var(--primary);
+    font-size: .875rem;
+
+    @apply my-2
+  }
+
+  .ctn {}
 }

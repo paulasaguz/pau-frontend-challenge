@@ -9,8 +9,8 @@ This repository contains a Next.js application generated via `create-next-app`.
 ```bash
 $   npm install      # install dependencies
 $   npm run dev      # run locally
-$   npm run test      # run locally
-$   npm run storybook     # run locally
+$   npm run test      # run test locally
+$   npm run storybook     # run storybook locally
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -18,6 +18,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Prompt
 
 The goal of this exercise is to build a reusable React component and to place it on a test page. The mockup details two different components to choose from: the MediaBanner and the ItemRow. The mockup provides a general layout, a color palette, and expected behavior on various screen sizes. Your task is to build one of these components in a reusable manner, to leverage the hook at `src/useData`, and to render the component on the page at `src/page`. Please use both TypeScript and Tailwind CSS to build your solution.
+
+## Results
+
+<details>
+  <summary>ItemRow</summary>
+
+![ItemRow](resources/screencapture.png)
+
+</details>
 
 ## Mockups
 
@@ -32,15 +41,6 @@ The goal of this exercise is to build a reusable React component and to place it
   <summary>ItemRow</summary>
 
 ![ItemRow](resources/ItemRow.png)
-
-</details>
-
-## Results
-
-<details>
-  <summary>ItemRow</summary>
-
-![ItemRow](resources/screencapture.png)
 
 </details>
 

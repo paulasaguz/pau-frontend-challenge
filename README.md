@@ -9,6 +9,8 @@ This repository contains a Next.js application generated via `create-next-app`.
 ```bash
 $   npm install      # install dependencies
 $   npm run dev      # run locally
+$   npm run test      # run locally
+$   npm run storybook     # run locally
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -30,6 +32,15 @@ The goal of this exercise is to build a reusable React component and to place it
   <summary>ItemRow</summary>
 
 ![ItemRow](resources/ItemRow.png)
+
+</details>
+
+## Results
+
+<details>
+  <summary>ItemRow</summary>
+
+![ItemRow](resources/screencapture.png)
 
 </details>
 

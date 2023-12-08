@@ -20,14 +20,14 @@ const Card = ({ img, heading, button, leadingText, orientation }: CardI) => {
             sizes="100vw"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
-        : <div className='w-full h-full bg-lightGrey' />
+        : <div className="w-full h-full bg-gray-700" />
       }
     </div>
-    <div className='p-6 sm:px-12 sm:grid sm:place-content-center'>
+    <div className="p-6 sm:px-12 sm:grid sm:place-content-center">
       <Typography  variant="body" Tag="h2">{leadingText}</Typography>
       <Typography className="mt-2 mb-4" variant="heading" Tag="p">{heading}</Typography>
       {
-        button ? <Button href={button.href} label={button.text} isMobileLayoutAdaptative target='_blank' /> : null
+        button ? <Button href={button.href} label={button.text} isMobileLayoutAdaptative target="_blank" /> : null
       }
     </div>
   </div>

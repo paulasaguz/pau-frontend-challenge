@@ -4,7 +4,7 @@ import '../app/globals.css';
 import Typography from '../components/ui/Typography';
 
 const meta = {
-  title: 'Typography',
+  title: 'UI/Typography',
   component: Typography,
   parameters: {
     Tag: 'p',

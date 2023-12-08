@@ -4,7 +4,7 @@ import '../app/globals.css';
 import Button from '../components/ui/Button';
 
 const meta = {
-  title: 'Button',
+  title: 'UI/Button',
   component: Button,
   parameters: {
     variant: 'primary',
@@ -20,7 +20,7 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
   args: {
-    label: 'Button 1'
+    label: 'Button'
   },
 };
 

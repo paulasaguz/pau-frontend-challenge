@@ -15,7 +15,7 @@ const buttton = {
 }
 
 const meta = {
-  title: 'Card',
+  title: 'UI/Card',
   component: Card,
   parameters: {
     img: image,
@@ -31,7 +31,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const RightCard: Story = {
   args: {
     img: image,

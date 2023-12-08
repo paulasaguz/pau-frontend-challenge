@@ -1,8 +1,15 @@
+import { Metadata } from 'next';
+
 import Header from "@/components/Header";
 import MediaBanner from "@/components/MediaBanner";
 import Footer from "@/components/Footer";
 import Typography from "@/components/ui/Typography";
 import PreFooter from "@/components/PreFooter/PreFooter";
+
+export const metadata: Metadata = {
+  title: "Clonevery | Learning Through Play for Your Child's Developing Brain",
+  description: 'Award-winning, Montessori-inspired toys and subscription boxes for babies and toddlers. Designed by child development experts and sustainably-made.',
+};
 
 export default function Home() {
   return (

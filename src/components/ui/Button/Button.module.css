@@ -12,6 +12,11 @@
     background: var(--mediumBlue);
   }
 }
+.secondary {
+  color: var(--primary);
+  background: var(--white);
+  border: 2px solid var(--primary);
+}
 
 .isMobileLayoutAdaptative {
   width: 100%;

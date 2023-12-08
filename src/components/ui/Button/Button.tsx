@@ -22,7 +22,7 @@ const Button: FC<ButtonProps> = props => {
   const rootClassName = cn(
     s.root,
     {
-      [s.inverted]: variant === 'primary',
+      [s.secondary]: variant === 'secondary',
       [s.disabled]: disabled,
       [s.isMobileLayoutAdaptative]: isMobileLayoutAdaptative,
     },

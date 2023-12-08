@@ -1,45 +1,15 @@
-import Image from 'next/image';
-import Button from "../ui/Button";
-import Typography from "../ui/Typography";
+'use client'
 
-interface MediaBannerI {
-  heading: string;
-  button: {
-    text: string;
-    href: string;
-  };
-  imageData: {
-    alt?: string;
-    caption?: string;
-    src: string;
-  };
-  orientation: string;
-  loadingText: string;
-  loading: boolean;
-};
+import useData from '@/hooks/useData';
+import Card from '../ui/Card';
 
-const MediaBanner = ({ loading, imageData, heading, button, loadingText }: MediaBannerI) => {
-  if (loading) return <p>{loadingText}</p>
+const MediaBanner = () => {
+  const { data, error, isLoading } = useData();
+  const { img, heading, orientation, button, leadingText } = data?.mediaBanner || {};
+  if (isLoading) return <p>Loading</p>
+  if (error) return <p>Error</p>
 
-  return (
-    <div className="bg-lightGrey flex flex-col sm:flex-row">
-      <div>
-        <Image 
-          src={imageData.src} alt={imageData.alt || 'lovevery foto'}
-          width={0}
-          height={0}
-          sizes="100vw"
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          priority
-        />
-      </div>
-      <div className='p-6 sm:px-12 sm:grid sm:place-content-center'>
-        <Typography  variant="body" Tag="h2">For all their firsts</Typography>
-        <Typography className="mt-2 mb-4" variant="heading" Tag="p">{heading}</Typography>
-        <Button label={button.text} isMobileLayoutAdaptative />
-      </div>
-    </div>
-  );
+  return <Card img={img} heading={heading} leadingText={leadingText} orientation={orientation} button={button} />
 };
 
 export default MediaBanner;

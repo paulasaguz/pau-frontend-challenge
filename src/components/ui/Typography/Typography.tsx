@@ -1,4 +1,5 @@
 import cn from 'classnames';
+
 import s from './Typography.module.css';
 
 import { TypographyInterface } from './types';

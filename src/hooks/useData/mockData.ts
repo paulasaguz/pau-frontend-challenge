@@ -1,36 +1,6 @@
-import { useEffect, useState } from "react";
+import { MockDataI } from './types';
 
-export interface Image {
-  src: string;
-  alt?: string;
-  caption?: string;
-}
-
-export interface Button {
-  text: string;
-  href: string;
-}
-
-export interface MockData {
-  mediaBanner: {
-    img?: Image;
-    leadingText?: string;
-    heading?: string;
-    orientation?: "left" | "right";
-    button?: Button;
-  };
-  itemRow: {
-    heading?: string;
-    items?: {
-      img?: Image;
-      heading?: string;
-      body?: string;
-    }[];
-    button?: Button;
-  };
-}
-
-const MOCK_DATA = {
+export const MOCK_DATA : MockDataI = {
   mediaBanner: {
     img: {
       src: "https://images.ctfassets.net/0sea1vycfyqy/66XcWTL8RWek8gliZLFpYu/e12b79045911f66166bdd34cffeadd62/700x500__1_.png",
@@ -39,7 +9,7 @@ const MOCK_DATA = {
     },
     leadingText: "For all their firsts",
     heading: "Joyful play at every stage, ages 0-4",
-    orientation: "right",
+    orientation: 'right',
     button: {
       text: "Explore the Play Kits",
       href: "https://lovevery.com/products/the-play-kits/",
@@ -96,30 +66,3 @@ const MOCK_DATA = {
     },
   },
 };
-
-export function useData() {
-  const [isLoading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<null | string | unknown>(null);
-  const [data, setData] = useState<typeof MOCK_DATA>();
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        setData(MOCK_DATA);
-      } catch (error) {
-        setError(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  return {
-    isLoading,
-    error,
-    data,
-  };
-}

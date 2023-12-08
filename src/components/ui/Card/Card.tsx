@@ -19,7 +19,6 @@ const Card = ({ img, heading, button, leadingText, orientation }: CardI) => {
             height={0}
             sizes="100vw"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-            priority
           />
         : <div className='w-full h-full bg-lightGrey' />
       }

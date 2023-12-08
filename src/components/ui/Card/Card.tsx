@@ -5,10 +5,12 @@ import Typography from "../Typography";
 
 import { CardI } from './types';
 
-const Card = ({ img, heading, button, leadingText }: CardI) => {
+const Card = ({ img, heading, button, leadingText, orientation }: CardI) => {
+  const invertedCard  = orientation === 'left';
+
   return (
     <div className="bg-lightGrey flex flex-col sm:flex-row">
-    <div>
+    <div className={`${invertedCard ? 'sm:order-1' : 'sm:-order-1'}`}>
       {
         img ?
           <Image 
